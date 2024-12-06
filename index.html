@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Logcryption</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="description" content="A encryption system using the Cantor Pairing Function.">
+		<meta property="og:title" content="Logcryption">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://shayaand.hackclub.app/logcryption">
+		<meta property="og:image" content="">
+		<meta property="og:image:alt" content="">
+
+		<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Logcryption" />
+		<link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+		<meta name="theme-color" content="#4d2e07">
+	</head>
+	<body class="shippori-antique-b1-regular">
+		<div id="particles-js"></div>
+		<!-- scripts -->
+
+		<script src="particles.js"></script>
+		<script>
+			/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+			particlesJS.load('particles-js', 'assets/particles.json', function() {
+				console.log('callback - particles.js config loaded');
+				console.log()
+			});
+		</script>
+
+		<!-- Add your site or application content here -->
+
+		<div class="content">
+			<h1>Logcryption</h1>
+			<h3>by Shayaan Doodekula</h3>
+			<h5>
+				Security? None.<br>
+				Coolness? 0.<br>
+				Data Storage? I guess.
+			</h5>
+			<h4>Decoded Text/Text to Encode</h4>
+			<textarea id="decoded" oninput="decodedBoxUpdate(this.value)"></textarea>
+			<br>
+			<h4>Encoded Text/Text to Decode</h4>
+			<textarea id="encoded" oninput="encodedBoxUpdate(this.value)"></textarea>
+
+			<!-- About accordion -->
+
+			<h2>About:</h2>
+
+			<button class="accordion">What is this?</button>
+			<div class="panel">
+				<p>Logcryption is a "encryption" algorithm that uses the Cantor pairing function to condense two characters into one. Although it is techincally encryption, it should only be used to store non-confidential data, and is optimal when the minimum amount of characters are required.</p>
+			</div>
+
+			<button class="accordion">Why should I use it?</button>
+			<div class="panel">
+				<p>Logcryption is an alphabet of sorts. If you need to store as much data as possible in as little characters as possible, you should use Logcryption.</p>
+			</div>
+
+			<button class="accordion">Pros vs Cons</button>
+			<div class="panel">
+				<h3>Pros</h3>
+				<br>
+				Can store lots of data in minimum space</br>
+				Cool for Easter eggs</br>
+				Prioritizes availability of more commonly used characters</br>
+				<h3>Cons</h3>
+				<br>
+				No support for higher unicode characters, Common punctuation, Latin Alphabet, and Numeric values are fully supported only<br>
+				Some fonts cannot read properly<br>
+				No Security<br>
+			</div>
+
+			<button class="accordion">Why does it look like Hebrew/Korean/Chinese?</button>
+			<div class="panel">
+				<p>Math 🤷‍♂️</p>
+			</div>
+			<h5>Made with ❤️ by Shayaan Doodekula</h5>
+		</div>
+
+		<script src="js/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	</body>
+</html>
