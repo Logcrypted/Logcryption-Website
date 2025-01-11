@@ -37,18 +37,20 @@
 		<!-- Add your site or application content here -->
 
 		<div class="content">
-			<h1>Logcryption</h1>
+			<h1 id="title">Logcryption</h1>
 			<h3>by Shayaan Doodekula</h3>
-			<h5>
+			<h5 id="desc">
 				Security? None.<br>
 				Coolness? 0.<br>
 				Data Storage? I guess.
 			</h5>
-			<h4>Decoded Text/Text to Encode</h4>
+			<h4>Text to Encode</h4>
 			<textarea id="decoded" oninput="decodedBoxUpdate(this.value)"></textarea>
-			<br>
-			<h4>Encoded Text/Text to Decode</h4>
+			<h4>Text to Decode</h4>
 			<textarea id="encoded" oninput="encodedBoxUpdate(this.value)"></textarea>
+			<br>
+			<button id="clippy" onclick="navigator.clipboard.writeText(encoded.value); alert('copied!')">Copy to Clipboard</button>
+			<br>
 
 			<!-- About accordion -->
 
@@ -68,9 +70,9 @@
 			<div class="panel">
 				<h3>Pros</h3>
 				<br>
-				Can store lots of data in minimum space</br>
-				Cool for Easter eggs</br>
-				Prioritizes availability of more commonly used characters</br>
+				Can store lots of data in minimum space<br>
+				Cool for Easter eggs<br>
+				Prioritizes availability of more commonly used characters<br>
 				<h3>Cons</h3>
 				<br>
 				No support for higher unicode characters, Common punctuation, Latin Alphabet, and Numeric values are fully supported only<br>

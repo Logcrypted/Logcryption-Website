@@ -1,8 +1,6 @@
 const decoded = document.getElementById("decoded")
 const encoded = document.getElementById("encoded")
 
-
-
 function decodedBoxUpdate(value) {
 	let splitted = splitString(value);
 	encoded.value = "";
@@ -34,12 +32,12 @@ function splitString(string) {
 }
 
 function depairing(char) {
-	let z = char.charCodeAt(0);
+	let z = char.codePointAt(0);
 	let w = Math.floor((Math.sqrt(8 * z + 1) - 1) / 2);
 	let t = (w * w + w) / 2;
 	let y = z - t;
 	let x = w - y;
-	return String.fromCharCode(x, y);
+	return String.fromCodePoint(x, y);
 
 }
 
@@ -51,22 +49,22 @@ function pairing(str) {
 	}
 
 	// f(m, n) = (m + n)(m + n + 1) / 2 + n
-	let a = aC.charCodeAt(0);
-	let b = bC.charCodeAt(0);
+	let a = aC.codePointAt(0);
+	let b = bC.codePointAt(0);
 
 	let prod = (a + b) * (a + b + 1);
-	return (String.fromCharCode(prod/2 + b))
+	return String.fromCodePoint(prod/2 + b)
 
 }
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+const acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++) {
 	acc[i].addEventListener("click", function() {
 		console.log("it happened!")
 		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
+		let panel = this.nextElementSibling;
 		if (panel.style.maxHeight) {
 			panel.style.maxHeight = null;
 		} else {
