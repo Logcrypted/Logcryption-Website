@@ -14,7 +14,8 @@ function decodedBoxUpdate(value) {
 function encodedBoxUpdate(value) {
 	decoded.value = "";
 	for (let i = 0; i < value.length; i++) {
-		let pair = depairing(value[i]);
+		let val = value[i];
+		let pair = depairing(val);
 		decoded.value += pair[0];
 		if (pair[1] !== "\u0000") {
 			decoded.value += pair[1];
